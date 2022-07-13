@@ -1,0 +1,32 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    background-image: url(../img/fondoNosotros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+}
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center ;
+}
+
+/***nosotros ***/
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+.iconos{
+    flex-basis: calc(33.3% - 1rem);
+}
+.iconos h3{
+    text-align: center;
+}
