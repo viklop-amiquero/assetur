@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-*,
+
 *:before,
 *:after {
     box-sizing: inherit;
@@ -17,10 +17,102 @@ body {
     font-family: 'Chelsea Market', cursive;
 }
 
+/*Estilos cabecera*/
+.containerCabecera {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+    z-index: 1;
+}
 
-/* header */
+.header {
+    background: rgb(240, 237, 237);
+    color: #fff;
+    padding: 2rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
 
-.hero {
+.header a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navegacion {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navegacion ul li {
+    display: inline-block;
+}
+
+.navegacion ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navegacion ul li a:hover {
+    background: #4a4a4a;
+}
+
+@media only screen and (max-width:767px) {
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navegacion {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .navegacion ul{
+        display: none;
+    }
+    .navegacion ul.show{
+        display: block;
+    }
+
+
+    .navegacion ul li {
+        display: block;
+    }
+
+    .navegacion ul li a {
+        display: block;
+        padding: 0rem 0rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navegacion ul li a:hover {
+        background: #4a4a4a;
+    }
+
+}
+
+/* Estilos inicio */
+
+.contenido_inicio {
     background-image: url('../img/FONDO.png');
     height: 100vh;
     background-position: top center;
@@ -28,10 +120,8 @@ body {
     position: relative;
 }
 
-
-
-.contenido-header {
-    padding-top: 40px;
+.ContenedorInicio {
+    padding-top: 6rem;
 }
 
 .redes-sociales {
@@ -55,7 +145,7 @@ body {
     margin-top: 50px;
 }
 
-.bienvenido{
+.bienvenido {
     padding-left: 20px;
     font-family: 'Chelsea Market', cursive;
     font-size: 5vw;
@@ -64,11 +154,11 @@ body {
 }
 
 .Inicio {
-    font-size: 9vw ;
+    font-size: 9vw;
     text-transform: uppercase;
     font-family: 'Monoton', cursive;
     color: #F20A0A;
-          
+
 }
 
 .slogan {
@@ -99,11 +189,13 @@ body {
     background: #C90842;
     transition: .3s ease all;
 }
-.bot_inicio{
+
+.bot_inicio {
     text-align: center;
 
 }
-.bot_destino{
+
+.bot_destino {
     padding-top: 200px;
     padding-left: 10px;
     text-align: left;
@@ -183,7 +275,7 @@ body {
     background-size: cover;
     background-position: center top;
     position: relative;
- 
+
 
 }
 
@@ -202,7 +294,7 @@ body {
     max-width: 225px;
     padding-top: 0px;
     display: inline-block;
-    
+
 
 }
 
@@ -314,4 +406,11 @@ body {
     margin-top: 30px;
     color: #06234e;
 
+}
+
+/*Estilos FOOTER*/
+.contenedorFooter{
+    background-color: #282729;
+    color: #948F8F;
+    text-align: center;
 }
