@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/fondo-reserva.png);
+}
+.form-register {
+    width: 900px;
+    background: #0b4782;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    margin: auto;
+
+}
+
+.botons{
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color:white;
+    margin: 16px 0;
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    
+}
+.boton1{
+    text-align: center;
+}
+
+.form-register h4 {
+    font-size:  22px;
+    margin-bottom: 20px;
+}
+.form-register p {
+    height:  40px;
+    text-align: center;
+    font-size: 18 px;
+    line-height: 40px;
+}
+
+
+.form-register a :hover{
+    color: white;
+    text-decoration: underline;
+
+}
+
+.controls {
+    width: 100%;
+    background: #f5f6f7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    text-align: center;  
+}
+
+.columnas{
+    display: flex;
+}
+
+.columna-derecha{
+    width: 400px;
+    margin-right: 20px;
+
+}
+.columna-izquierda{
+    width: 400px;
+}
+.columna-izquierda input:last-child{
+    height: 200px;
+    border-radius: 20px;
+
+}
+.terminos-condiciones{
+    text-align:center;
+}
