@@ -21,32 +21,50 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <!--CABECERA-->
-
-    <header class="header">
-        <div class="containerCabecera ">
-            <div class="row">
-                <div class="col logo-nav-container">
-                    <a href="#" class="Logo"><img src="/img/Logo-simple.png" style="width: 204px ;height:60px;" alt=""></a>
-                    <span class="Menu-icon">Ver menú</span>
-                    <nav class="navegacion">
-                        <ul class="show">
-                            <!--AQUI NECESITAMOS USAR js-->
-                            <li><a href="#">INICIO</a></li>
-                            <li><a href="#">DESTINOS</a></li>
-                            <li><a href="#">NOSOTROS</a></li>
-                            <li><a href="#">PAQUETES</a></li>
-                            <li><a href="#">GALERÍA</a></li>
-                        </ul>
-                    </nav>
+    <div class="contenedorCabecera">
+        <header class="header">
+            <div class="containerCabecera ">
+                <div class="row">
+                    <div class="col logo-nav-container">
+                        <a href="#" class="Logo"><img src="/img/Logo-simple.png" style="width: 204px ;height:60px;"
+                                alt=""></a>
+                        <span class="Menu-icon"><i class="fa-solid fa-bars"></i></span>
+                        <nav class="navegacion">
+                            <ul class="">
+                                <li><a href="#"><b>INICIO</b> </a></li>
+                                <li><a href="#"><b>DESTINOS</b> </a></li>
+                                <li><a href="#"><b>NOSOTROS</b> </a></li>
+                                <li><a href="#"><b>PAQUETES</b> </a></li>
+                                <li><a href="#"><b>GALERÍA</b> </a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+
+        <script>
+            jQuery('document').ready(function ($) {
+                var menuBtn = $('.Menu-icon'),
+                    menu = $('.navegacion ul');
+                menuBtn.click(function () {
+                    if (menu.hasClass('show')) {
+                        menu.removeClass('show')
+
+                    } else {
+                        menu.addClass('show')
+                    }
+                });
+            })
+
+        </script>
+    </div>
+
     <!--INICIO-->
 
     <div class="ContenedorInicio ">
@@ -88,114 +106,117 @@
     </div>
 
     <!--INICIA DESTINOS-->
-    <div class="contenedorDestinos">
-        <div class="box">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card" style="background-image: url(img/PODERJUDICIAL.png)">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3>Grandiosas vistas</h3>
+    <dig class="generalDestinos">
+        <div class="contenedorDestinos">
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="background-image: url(img/PODERJUDICIAL.png)">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h3>Grandiosas vistas</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 bot_destino">
-                                <a href="#" class="boton">
-                                    <span class="boton__texto">RESERVAR</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card" style="background-image: url(img/ALTURAPOMACOCHA.png)">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3>Campamento al aire libre</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 bot_destino">
-                                <a href="#" class="boton">
-                                    <span class="boton__texto">RESERVAR</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
+                            <div class="row">
+                                <div class="col-lg-12 bot_destino">
+                                    <a href="#" class="boton">
+                                        <span class="boton__texto">RESERVAR</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="card" style="background-image: url(img/JRASAMBLEA.png)">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h3>Planifica tu siguiente aventura con Assetur</h3>
+                    <div class="col-lg-6">
+                        <div class="card" style="background-image: url(img/ALTURAPOMACOCHA.png)">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h3>Campamento al aire libre</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 bot_destino">
+                                    <a href="#" class="boton">
+                                        <span class="boton__texto">RESERVAR</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 bot_destino">
-                                <a href="#" class="boton">
-                                    <span class="boton__texto">RESERVAR</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card" style="background-image: url(img/JRASAMBLEA.png)">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h3>Planifica tu siguiente aventura con Assetur</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 bot_destino">
+                                    <a href="#" class="boton">
+                                        <span class="boton__texto">RESERVAR</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </dig>
     <!--INICIA NOSOTROS-->
-    <div class="contenedorNosotros">
-        <div class="row">
-            <div class="col  text-center mb-4">
-                <h2 class="display-1 Nosotros"><b>NOSOTROS</b> </h2>
-            </div>
-        </div>
-        <div class="iconos-nosotros">
+    <div class="generalNosotros">
+        <div class="contenedorNosotros">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="iconos">
-                        <h3 class="tituNosotros">Seguridad</h3>
-                        <p style="text-align: justify">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
-                            reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
-                            voluptates, minus cupiditate soluta ea molestias fugiat.
-
-                        </p>
-                    </div>
+                <div class="col  text-center mb-4">
+                    <h2 class="display-1 Nosotros"><b>NOSOTROS</b> </h2>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 ">
+            </div>
+            <div class="iconos-nosotros">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="iconos">
-                        <h3 class="tituNosotros">Precio</h3>
-                        <p style="text-align: justify">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
-                            reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
-                            voluptates, minus cupiditate soluta ea molestias fugiat.
-                        </p>
+                        <div class="iconos">
+                            <h3 class="tituNosotros">Seguridad</h3>
+                            <p style="text-align: justify">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
+                                reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
+                                voluptates, minus cupiditate soluta ea molestias fugiat.
 
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="col-lg-4 col-md-6 col-sm-12 ">
 
-                    <div class="iconos">
+                        <div class="iconos">
+                            <h3 class="tituNosotros">Precio</h3>
+                            <p style="text-align: justify">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
+                                reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
+                                voluptates, minus cupiditate soluta ea molestias fugiat.
+                            </p>
 
-                        <h3 class="tituNosotros">Tiempo</h3>
-                        <p style="text-align: justify">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
-                            reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
-                            voluptates, minus cupiditate soluta ea molestias fugiat.
-                        </p>
-
+                        </div>
                     </div>
-                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 ">
 
+                        <div class="iconos">
+
+                            <h3 class="tituNosotros">Tiempo</h3>
+                            <p style="text-align: justify">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit repellat enim magnam
+                                reiciendis pariatur aliquam dolorum autem? Ea, placeat? Odit nihil officiis eveniet
+                                voluptates, minus cupiditate soluta ea molestias fugiat.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-
     <!--PAQUETES-->
     <div class="ContenedorPaquete text-center ">
 
@@ -295,7 +316,6 @@
     <!--INICIA GALERÍA-->
 
     <div class="contenedorGaleria">
-
         <div class="row">
             <div class="col-lg-12  text-center mb-4">
                 <h2 class="display-1 Galeria"> <b> NUESTRA GALERÍA </b></h2>
@@ -325,7 +345,7 @@
             <div class="row">
                 <div class="col">
                     <div class="row ">
-                        <h2>AV. Arenales 778, 
+                        <h2>AV. Arenales 778,
                             San Juan Bautista - Ayacucho</h2>
 
                     </div>
